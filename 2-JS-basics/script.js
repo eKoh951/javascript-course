@@ -72,9 +72,12 @@ console.log(typeof 'Mark is older than John');
 var x;
 console.log(typeof x);
 */
+
 /***************************
 * Operators precedence
 */
+
+/*
 var now = 2018;
 var yearJohn = 1989;
 var fullAge = 18;
@@ -106,3 +109,18 @@ x++;
 console.log( x );
 x--;
 console.log( x );
+*/
+
+var markHeight = 1.8;
+var markMass = 80;
+var markBMI = markMass / ( markHeight * markHeight );
+
+var johnHeight = 1.9;
+var johnMass = 85;
+var johnBMI  = johnMass / ( johnHeight * johnHeight );
+
+var isMarkBmiHigher = markBMI > johnBMI;
+
+console.log( 'Is Mark\'s BMI higher than Johns?', isMarkBmiHigher );
+console.log( 'Mark\'s BMI is ', markBMI );
+console.log( 'John\'s BMI is ', johnBMI );
