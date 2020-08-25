@@ -474,40 +474,82 @@ if ( markBMI > johnBMI ) {
 * Coding challenge 4
 */
 
-var john = {
+// var john = {
 
-	fullName: 'John Smith',
-	mass: 80,
-	height: 1.8,
-	calcBMI: function() {
-		this.bmi = this.mass / ( this.height * this.height );
-		return this.bmi;
-	}
+// 	fullName: 'John Smith',
+// 	mass: 80,
+// 	height: 1.8,
+// 	calcBMI: function() {
+// 		this.bmi = this.mass / ( this.height * this.height );
+// 		return this.bmi;
+// 	}
 	
-};
+// };
 
-var mark = {
+// var mark = {
 
-	fullName: 'Mark Wilkerson',
-	mass: 90,
-	height: 1.9,
-	calcBMI: function() {
-		this.bmi = this.mass / ( this.height * this.height );
-		return this.bmi;
-	}
+// 	fullName: 'Mark Wilkerson',
+// 	mass: 90,
+// 	height: 1.9,
+// 	calcBMI: function() {
+// 		this.bmi = this.mass / ( this.height * this.height );
+// 		return this.bmi;
+// 	}
 	
-};
+// };
 
-var highestBMI;
-john.calcBMI();
-mark.calcBMI();
+// var highestBMI;
+// john.calcBMI();
+// mark.calcBMI();
 
-if ( john.bmi > mark.bmi ) {
-	highestBMI = john.fullName + ' has the highest BMI';
-} else if ( john.bmi < mark.bmi ) {
-	highestBMI = mark.fullName + ' has the highest BMI';
-} else {
-	highestBMI = john.fullName + ' and ' + mark.fullName + ' have the same BMI';
+// if ( john.bmi > mark.bmi ) {
+// 	highestBMI = john.fullName + ' has the highest BMI';
+// } else if ( john.bmi < mark.bmi ) {
+// 	highestBMI = mark.fullName + ' has the highest BMI';
+// } else {
+// 	highestBMI = john.fullName + ' and ' + mark.fullName + ' have the same BMI';
+// }
+
+// console.log( highestBMI );
+
+/***************************
+* Loops and iterations
+*/
+
+
+// for( var i = 0; i < 10; i++ ) {
+// 	console.log( i );
+// }
+
+// var john = [ 'John', 'Smith', 1990, 'designer', false, 'blue' ];
+
+// for( var i = 0; i < john.length; i++ ) {
+// 	console.log( john[ i ] );
+// }
+
+// var i = 0;
+// while( i < john.length ) {
+// 	console.log( john[ i ] );
+// 	i++;
+// }
+
+// Continue and Break statements
+var john = [ 'John', 'Smith', 1990, 'designer', false, 'blue' ];
+
+// // continue with the loop
+// for( var i = 0; i < john.length; i++ ) {
+// 	if( typeof john[ i ] !== 'string' ) continue;
+// 	console.log( john[ i ] );
+// }
+
+// // breaks the loop
+// for( var i = 0; i < john.length; i++ ) {
+// 	if( typeof john[ i ] !== 'string' ) break;
+// 	console.log( john[ i ] );
+// }
+
+// Looping backwards
+for( var i = john.length; i >= 0; i-- ) {
+	if( typeof john[ i ] !== 'string' ) continue;
+	console.log( john[ i ] );
 }
-
-console.log( highestBMI );
