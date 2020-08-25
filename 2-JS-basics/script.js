@@ -327,24 +327,56 @@ if ( markBMI > johnBMI ) {
 // function whatDoYouDo ( job, firstName ) {}
 
 // Function expression
-var whatDoYouDo = function ( job, firstName ) { 
+// var whatDoYouDo = function ( job, firstName ) { 
 
-	switch ( job ) {
-		case 'teacher':
-			return firstName + ' teaches kids how to code';
+// 	switch ( job ) {
+// 		case 'teacher':
+// 			return firstName + ' teaches kids how to code';
 			
-		case 'driver':
-			return firstName + ' drives a cab in Lisbon';
+// 		case 'driver':
+// 			return firstName + ' drives a cab in Lisbon';
 				
-		case 'designer':
-			return firstName + ' designs beautiful websites';
+// 		case 'designer':
+// 			return firstName + ' designs beautiful websites';
 				
-		default:
-			return firstName + ' does something else';
-	}
+// 		default:
+// 			return firstName + ' does something else';
+// 	}
 	
-}
+// }
 
-console.log( whatDoYouDo( 'teacher', 'John' ) );
-console.log( whatDoYouDo( 'designer', 'Jane' ) );
-console.log( whatDoYouDo( 'retired', 'Mark' ) );
+// console.log( whatDoYouDo( 'teacher', 'John' ) );
+// console.log( whatDoYouDo( 'designer', 'Jane' ) );
+// console.log( whatDoYouDo( 'retired', 'Mark' ) );
+
+/***************************
+* Arrays
+*/
+
+// Initialize new array
+var names = [ 'John', 'Mark', 'Jane' ];
+var years = new Array( 1990, 1961, 1948 );
+
+console.log( names );
+console.log( names.length );
+
+// Mutate array data
+names[ 1 ] = 'Ben';
+names[ names.length ] = 'Mary';
+console.log( names );
+
+// Different data types
+var john = [ 'John', 'Smith', 1990, 'designer', false ];
+
+john.push( 'Blue' );
+john.unshift( 'Mr.' );	// Adds to the first element
+
+console.log( john );
+
+john.pop();	// Removes the last element
+john.pop();
+console.log( john );
+console.log( john.indexOf( 1990 ) );
+
+var isDesigner = john.indexOf( 'designer' ) === -1 ? 'John is not a designer' : 'John is a designer';
+console.log( isDesigner );
