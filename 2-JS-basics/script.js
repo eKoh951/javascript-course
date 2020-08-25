@@ -453,19 +453,61 @@ if ( markBMI > johnBMI ) {
 * Objects and methods
 */
 
-var john = { 
+// var john = { 
 
-	firstName: 'John',
-	lastName: 'Smith',
-	birthYear: 1990,
-	family: [ 'Jane', 'Mark', 'Bob', 'Emily' ],
-	job: 'teacher',
-	isMarried: false,
-	calcAge: function() {
-		this.age = 2018 - this.birthYear ;
+// 	firstName: 'John',
+// 	lastName: 'Smith',
+// 	birthYear: 1990,
+// 	family: [ 'Jane', 'Mark', 'Bob', 'Emily' ],
+// 	job: 'teacher',
+// 	isMarried: false,
+// 	calcAge: function() {
+// 		this.age = 2018 - this.birthYear ;
+// 	}
+	
+// };
+
+// john.calcAge();
+// console.log( john );
+
+/***************************
+* Coding challenge 4
+*/
+
+var john = {
+
+	fullName: 'John Smith',
+	mass: 80,
+	height: 1.8,
+	calcBMI: function() {
+		this.bmi = this.mass / ( this.height * this.height );
+		return this.bmi;
 	}
 	
 };
 
-john.calcAge();
-console.log( john );
+var mark = {
+
+	fullName: 'Mark Wilkerson',
+	mass: 90,
+	height: 1.9,
+	calcBMI: function() {
+		this.bmi = this.mass / ( this.height * this.height );
+		return this.bmi;
+	}
+	
+};
+
+var highestBMI;
+john.calcBMI();
+mark.calcBMI();
+
+if ( john.bmi > mark.bmi ) {
+	highestBMI = john.fullName + ' has the highest BMI';
+} else if ( john.bmi < mark.bmi ) {
+	highestBMI = mark.fullName + ' has the highest BMI';
+} else {
+	highestBMI = john.fullName + ' and ' + mark.fullName + ' have the same BMI';
+}
+
+console.log( highestBMI );
