@@ -252,16 +252,35 @@ if ( markBMI > johnBMI ) {
 // falsy values: undefined, null, 0, '', NaN
 // truthy values: NOT  falsy values
 
-var height;
-height = '';
+// var height;
+// height = '';
 
-if ( height || height === 0 ) {
-	console.log( 'Variable is defined' );
-} else {
-	console.log( 'Variable has NOT been defined' );
-}
+// if ( height || height === 0 ) {
+// 	console.log( 'Variable is defined' );
+// } else {
+// 	console.log( 'Variable has NOT been defined' );
+// }
 
-// Equality operators
-if ( height == '23' ) {
-	console.log( 'The == operator does type coercion!' );
-}
+// // Equality operators
+// if ( height == '23' ) {
+// 	console.log( 'The == operator does type coercion!' );
+// }
+
+/***************************
+* Coding challenge 2
+*/
+
+var johnTeamScore1 = 89;
+var johnTeamScore2 = 120;
+var johnTeamScore3 = 103;
+
+var markTeamScore1 = 116;
+var markTeamScore2 = 94;
+var markTeamScore3 = 123;
+
+var johnTeamAverageScore = ( johnTeamScore1 + johnTeamScore2 + johnTeamScore3 ) / 3;
+var markTeamAverageScore = ( markTeamScore1 + markTeamScore2 + markTeamScore3 ) / 3;
+
+var highestScoreTeam1 = ( johnTeamAverageScore > markTeamAverageScore ) ? 'John Team' : 'Mark Team';
+
+console.log( 'The winner team is ', highestScoreTeam );
