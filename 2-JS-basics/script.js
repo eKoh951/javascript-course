@@ -353,30 +353,65 @@ if ( markBMI > johnBMI ) {
 * Arrays
 */
 
-// Initialize new array
-var names = [ 'John', 'Mark', 'Jane' ];
-var years = new Array( 1990, 1961, 1948 );
+// // Initialize new array
+// var names = [ 'John', 'Mark', 'Jane' ];
+// var years = new Array( 1990, 1961, 1948 );
 
-console.log( names );
-console.log( names.length );
+// console.log( names );
+// console.log( names.length );
 
-// Mutate array data
-names[ 1 ] = 'Ben';
-names[ names.length ] = 'Mary';
-console.log( names );
+// // Mutate array data
+// names[ 1 ] = 'Ben';
+// names[ names.length ] = 'Mary';
+// console.log( names );
 
-// Different data types
-var john = [ 'John', 'Smith', 1990, 'designer', false ];
+// // Different data types
+// var john = [ 'John', 'Smith', 1990, 'designer', false ];
 
-john.push( 'Blue' );
-john.unshift( 'Mr.' );	// Adds to the first element
+// john.push( 'Blue' );
+// john.unshift( 'Mr.' );	// Adds to the first element
 
-console.log( john );
+// console.log( john );
 
-john.pop();	// Removes the last element
-john.pop();
-console.log( john );
-console.log( john.indexOf( 1990 ) );
+// john.pop();	// Removes the last element
+// john.pop();
+// console.log( john );
+// console.log( john.indexOf( 1990 ) );
 
-var isDesigner = john.indexOf( 'designer' ) === -1 ? 'John is not a designer' : 'John is a designer';
-console.log( isDesigner );
+// var isDesigner = john.indexOf( 'designer' ) === -1 ? 'John is not a designer' : 'John is a designer';
+// console.log( isDesigner );
+
+
+/***************************
+* Coding challenge 3
+*/
+
+var calculateTip = function( bill ) {
+
+	if( bill < 50 ) {
+		tip = 20;
+	} else if ( bill < 200 ) {
+		tip = 15;
+	} else {
+		tip = 10;
+	}
+
+	return bill * ( tip / 100 );
+	
+}
+
+var bills = [ 124, 48, 268 ];
+
+var tips = [	calculateTip( bills[ 0 ] ),
+							calculateTip( bills[ 1 ] ),
+							calculateTip( bills[ 2 ] )
+						];
+
+var paidAmounts = [	tips[ 0 ] + bills[ 0 ],
+										tips[ 1 ] + bills[ 1 ],
+										tips[ 2 ] + bills[ 2 ]
+									];
+
+console.log( 'bills', bills );
+console.log( 'tips', tips );
+console.log( 'paidAmounts', paidAmounts );
