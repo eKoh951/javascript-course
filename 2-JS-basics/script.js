@@ -516,7 +516,6 @@ if ( markBMI > johnBMI ) {
 * Loops and iterations
 */
 
-
 // for( var i = 0; i < 10; i++ ) {
 // 	console.log( i );
 // }
@@ -533,23 +532,54 @@ if ( markBMI > johnBMI ) {
 // 	i++;
 // }
 
-// Continue and Break statements
-var john = [ 'John', 'Smith', 1990, 'designer', false, 'blue' ];
+// // Continue and Break statements
+// var john = [ 'John', 'Smith', 1990, 'designer', false, 'blue' ];
 
-// // continue with the loop
-// for( var i = 0; i < john.length; i++ ) {
+// // // continue with the loop
+// // for( var i = 0; i < john.length; i++ ) {
+// // 	if( typeof john[ i ] !== 'string' ) continue;
+// // 	console.log( john[ i ] );
+// // }
+
+// // // breaks the loop
+// // for( var i = 0; i < john.length; i++ ) {
+// // 	if( typeof john[ i ] !== 'string' ) break;
+// // 	console.log( john[ i ] );
+// // }
+
+// // Looping backwards
+// for( var i = john.length; i >= 0; i-- ) {
 // 	if( typeof john[ i ] !== 'string' ) continue;
 // 	console.log( john[ i ] );
 // }
 
-// // breaks the loop
-// for( var i = 0; i < john.length; i++ ) {
-// 	if( typeof john[ i ] !== 'string' ) break;
-// 	console.log( john[ i ] );
-// }
+/***************************
+* Coding challenge 5
+*/
 
-// Looping backwards
-for( var i = john.length; i >= 0; i-- ) {
-	if( typeof john[ i ] !== 'string' ) continue;
-	console.log( john[ i ] );
+var john = {
+	fullName: 'John Smith',
+	calcTip: function( bills ) {
+		this.bills = bills;
+		this.tips = [];
+		this.paidAmounts = [];
+		for( var i = 0; i < this.bills.length; i++ ) {
+			
+			var percentage;
+			if( this.bills[i] < 50 ) {
+				percentage = 0.2;
+			} else if( this.bills[i] < 200 ) {
+				percentage = 0.15;
+			} else {
+				percentage = 0.10;
+			}
+
+			this.tips[i] = this.bills[i] * percentage;
+			this.paidAmounts[i] = this.bills[i] + this.tips[i];
+		}
+	}	
 }
+
+john.calcTip( [ 124, 48, 268, 180, 42 ] );
+
+console.log( john );
