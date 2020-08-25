@@ -288,30 +288,63 @@ if ( markBMI > johnBMI ) {
 * Functions
 */
 
-function calculateAge( birthYear ) {
+// function calculateAge( birthYear ) {
+	
+// 	return 2018 - birthYear;
+	
+// }
 
-	return 2018 - birthYear;
+// var ageJohn = calculateAge( 1990 );
+// var ageMike = calculateAge( 1948 );
+// var ageJane = calculateAge( 1969 );
 
-}
+// console.log( ageJohn, ageMike, ageJane );
 
-var ageJohn = calculateAge( 1990 );
-var ageMike = calculateAge( 1948 );
-var ageJane = calculateAge( 1969 );
+// function yearsUntilReitrement( year, firstName ) {
+	
+// 	var age = calculateAge( year );
+// 	var retirement = 65 - age;
+// 	if ( retirement > 0 ) {
+// 		console.log( firstName + ' retires in ' + retirement + ' years.' );
+// 	} else {
+// 		console.log( firstName + ' is already retired.' );
+// 	}
+	
+// }
 
-console.log( ageJohn, ageMike, ageJane );
+// yearsUntilReitrement( 1990, 'John' );
+// yearsUntilReitrement( 1948, 'Mike' );
+// yearsUntilReitrement( 1969, 'Jane' );
 
-function yearsUntilReitrement( year, firstName ) {
+/***************************
+* Functions Statements and Expressions
+*/
 
-	var age = calculateAge( year );
-	var retirement = 65 - age;
-	if ( retirement > 0 ) {
-		console.log( firstName + ' retires in ' + retirement + ' years.' );
-	} else {
-		console.log( firstName + ' is already retired.' );
+// Statements		=> Produce actions but not results
+// Expressions	=> Produces actions and expects results
+
+// Function declaration => Produces actions but not immediate results
+// function whatDoYouDo ( job, firstName ) {}
+
+// Function expression
+var whatDoYouDo = function ( job, firstName ) { 
+
+	switch ( job ) {
+		case 'teacher':
+			return firstName + ' teaches kids how to code';
+			
+		case 'driver':
+			return firstName + ' drives a cab in Lisbon';
+				
+		case 'designer':
+			return firstName + ' designs beautiful websites';
+				
+		default:
+			return firstName + ' does something else';
 	}
 	
 }
 
-yearsUntilReitrement( 1990, 'John' );
-yearsUntilReitrement( 1948, 'Mike' );
-yearsUntilReitrement( 1969, 'Jane' );
+console.log( whatDoYouDo( 'teacher', 'John' ) );
+console.log( whatDoYouDo( 'designer', 'Jane' ) );
+console.log( whatDoYouDo( 'retired', 'Mark' ) );
