@@ -386,32 +386,65 @@ if ( markBMI > johnBMI ) {
 * Coding challenge 3
 */
 
-var calculateTip = function( bill ) {
+// var calculateTip = function( bill ) {
 
-	if( bill < 50 ) {
-		tip = 20;
-	} else if ( bill < 200 ) {
-		tip = 15;
-	} else {
-		tip = 10;
-	}
+// 	if( bill < 50 ) {
+// 		tip = 20;
+// 	} else if ( bill < 200 ) {
+// 		tip = 15;
+// 	} else {
+// 		tip = 10;
+// 	}
 
-	return bill * ( tip / 100 );
+// 	return bill * ( tip / 100 );
 	
-}
+// }
 
-var bills = [ 124, 48, 268 ];
+// var bills = [ 124, 48, 268 ];
 
-var tips = [	calculateTip( bills[ 0 ] ),
-							calculateTip( bills[ 1 ] ),
-							calculateTip( bills[ 2 ] )
-						];
+// var tips = [	calculateTip( bills[ 0 ] ),
+// 							calculateTip( bills[ 1 ] ),
+// 							calculateTip( bills[ 2 ] )
+// 						];
 
-var paidAmounts = [	tips[ 0 ] + bills[ 0 ],
-										tips[ 1 ] + bills[ 1 ],
-										tips[ 2 ] + bills[ 2 ]
-									];
+// var paidAmounts = [	tips[ 0 ] + bills[ 0 ],
+// 										tips[ 1 ] + bills[ 1 ],
+// 										tips[ 2 ] + bills[ 2 ]
+// 									];
 
-console.log( 'bills', bills );
-console.log( 'tips', tips );
-console.log( 'paidAmounts', paidAmounts );
+// console.log( 'bills', bills );
+// console.log( 'tips', tips );
+// console.log( 'paidAmounts', paidAmounts );
+
+/***************************
+* Objects and properties
+*/
+
+// Object literal
+var john = { 
+
+	firstName: 'John',
+	lastName: 'Smith',
+	birthYear: 1990,
+	family: [ 'Jane', 'Mark', 'Bob', 'Emily' ],
+	job: 'teacher',
+	isMarried: false
+	
+};
+
+console.log( john.firstName );
+console.log( john[ 'lastName' ] );
+var x = 'birthYear';
+
+console.log( john[ x ] );
+
+john.job = 'designer';
+john[ 'isMarried' ] = true;
+console.log( john );
+
+// New Object syntax
+var jane = new Object();
+jane.name = 'Jane';
+jane.birthYear = 1969;
+jane[ 'lastName' ] = 'Smith';
+console.log( jane );
