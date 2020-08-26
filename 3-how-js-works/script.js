@@ -30,23 +30,57 @@
 * Scoping example
 ****************************/
 
-var a = 'Hello';
-first();
+// var a = 'Hello';
+// first();
 
-function first() {
-    var b = 'Hi';
-    second();
+// function first() {
+//     var b = 'Hi';
+//     second();
 
-    function second() {
-        var c = 'Hey';
-        console.log( a + b + c );
-    }
+//     function second() {
+//         var c = 'Hey';
+//         console.log( a + b + c );
+//     }
+// }
+
+/****************************
+* The this keyword
+****************************/
+
+// console.log( this );
+
+calcAge( 1985 );
+
+function calcAge( year ) {
+    console.log( 2016 - year );
+    console.log( this );
 }
 
+var john = {
+    name: 'John',
+    yearOfBirth: 1990,
+    calcAge: function() {
+        console.log( this );
+        console.log( 2016 - this.yearOfBirth );
 
+        // function innerFunction() {
+        //     console.log( this );
+        // }
+        // innerFunction();
+    }
+};
 
+john.calcAge();
 
+var mike = {
+    name: 'Mike',
+    yearOfBirth: 1984
+};
 
+// Reference function: Method borrowing
+mike.calcAge = john.calcAge;
+
+mike.calcAge();
 
 
 
